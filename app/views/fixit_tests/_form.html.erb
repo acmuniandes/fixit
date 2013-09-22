@@ -1,0 +1,37 @@
+<%= form_for(@fixit_test) do |f| %>
+  <% if @fixit_test.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fixit_test.errors.count, "error") %> prohibited this fixit_test from being saved:</h2>
+
+      <ul>
+      <% @fixit_test.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :type %><br>
+    <%= f.text_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :details %><br>
+    <%= f.text_field :details %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :picture %><br>
+    <%= f.text_field :picture %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

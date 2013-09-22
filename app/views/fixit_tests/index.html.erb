@@ -1,0 +1,35 @@
+<h1>Listing fixit_tests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Details</th>
+      <th>Email</th>
+      <th>Location</th>
+      <th>Picture</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fixit_tests.each do |fixit_test| %>
+      <tr>
+        <td><%= fixit_test.type %></td>
+        <td><%= fixit_test.details %></td>
+        <td><%= fixit_test.email %></td>
+        <td><%= fixit_test.location %></td>
+        <td><%= fixit_test.picture %></td>
+        <td><%= link_to 'Show', fixit_test %></td>
+        <td><%= link_to 'Edit', edit_fixit_test_path(fixit_test) %></td>
+        <td><%= link_to 'Destroy', fixit_test, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fixit test', new_fixit_test_path %>

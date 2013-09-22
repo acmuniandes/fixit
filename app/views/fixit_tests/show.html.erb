@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @fixit_test.type %>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @fixit_test.details %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @fixit_test.email %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @fixit_test.location %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @fixit_test.picture %>
+</p>
+
+<%= link_to 'Edit', edit_fixit_test_path(@fixit_test) %> |
+<%= link_to 'Back', fixit_tests_path %>
