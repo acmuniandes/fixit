@@ -1,0 +1,54 @@
+  <%= render_navbar %>
+
+  <!--<div class="container">-->
+
+    <h1>Listing damages</h1>
+
+    <% @damages.each do |dam|%>
+    <div class="row">
+      <div class="col-md-2">
+        <img src=<%=dam.url%>>
+      </div>
+     <div class="col-md-8">
+        <p>Categoría <%= dam.category%></p>
+        <p>Detalles <%= dam.details%></p>
+        <p>Ubicación <%= dam.location%></p>
+        <p><%= link_to 'Editar', edit_damage_path(dam) %></p>
+        <p><%= link_to 'Destroy', dam, method: :delete, data: { confirm: '¿Seguranzas?' } %></p>
+      </div>
+    </div>
+    <%end%>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Details</th>
+          <th>Url</th>
+          <th>Location</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @damages.each do |damage| %>
+          <tr>
+            <td><%= damage.category %></td>
+            <td><%= damage.details %></td>
+            <td><%= damage.url %></td>
+            <td><%= damage.location %></td>
+            <td><%= link_to 'Show', damage %></td>
+            <td><%= link_to 'Edit', edit_damage_path(damage) %></td>
+            <td><%= link_to 'Destroy', damage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <!--<br>-->
+
+    <%= link_to 'New Damage', new_damage_path %>
+
+  </div>

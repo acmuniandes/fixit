@@ -1,0 +1,26 @@
+<%= render_navbar %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @damage.category%>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @damage.details %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @damage.url %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @damage.location %>
+</p>
+
+<%= link_to 'Edit', edit_damage_path(@damage) %> |
+<%= link_to 'Back', damages_path %>
