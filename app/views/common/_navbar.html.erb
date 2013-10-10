@@ -6,12 +6,16 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="damages#home">Fixit</a>
+            <%= link_to "Fixit", "/",:class=>"navbar-brand"%>
           </div>
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-              <li><a href="damages#about">Acerca</a></li>
-              <li><a href="damages#contact">Contáctanos</a></li>
+              <li>
+                <%= link_to "Daños", damages_path,:class=>""%>
+              </li>
+              <li>
+                <%= link_to "Reportar", new_damage_path,:class=>""%>
+              </li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
