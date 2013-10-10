@@ -11,4 +11,7 @@
  *= require_self
  *= require bootstrap/variables.less
  *= require home.css.less
+ *= require damages.css.less
  */
+
+
